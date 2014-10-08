@@ -60,7 +60,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -337,13 +337,13 @@
             this.button7.TabIndex = 23;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn2
             // 
-            this.button8.Location = new System.Drawing.Point(140, 194);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(40, 40);
-            this.button8.TabIndex = 24;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn2.Location = new System.Drawing.Point(140, 194);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(40, 40);
+            this.btn2.TabIndex = 24;
+            this.btn2.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -368,7 +368,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 364);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btn2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -438,7 +438,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button9;
     }
