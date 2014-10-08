@@ -19,3 +19,6 @@ F:\Programming Challenge\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicT
 F:\Programming Challenge\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
 F:\Programming Challenge\ProgrammingChallenge\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
 F:\Programming Challenge\ProgrammingChallenge\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+H:\TicTacToe\ProgrammingChallenge\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+H:\TicTacToe\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+H:\TicTacToe\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
