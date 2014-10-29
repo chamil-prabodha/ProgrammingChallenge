@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicTacToe.DataAccess;
 
 namespace TicTacToe
 {
@@ -14,6 +15,7 @@ namespace TicTacToe
         [STAThread]
         static void Main()
         {
+            Connector.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWin());

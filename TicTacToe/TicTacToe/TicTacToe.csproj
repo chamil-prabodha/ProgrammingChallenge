@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,16 +48,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWin.cs">
+    <Compile Include="Board\Board.cs" />
+    <Compile Include="Board\MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWin.Designer.cs">
+    <Compile Include="Board\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Board\Player.cs" />
+    <Compile Include="Board\Program.cs" />
+    <Compile Include="DataAccess\Connector.cs" />
+    <Compile Include="DataAccess\PlayerDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainWin.resx">
+    <Compile Include="Scores\Scores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores\Scores.Designer.cs">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Board\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -65,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Scores\Scores.resx">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -48,18 +48,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblCurrentPLayer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.txtPlayer1.Name = "txtPlayer1";
             this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
             this.txtPlayer1.TabIndex = 0;
+            
             // 
             // txtPlayer2
             // 
@@ -130,6 +132,7 @@
             this.scoreToolStripMenuItem.Name = "scoreToolStripMenuItem";
             this.scoreToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.scoreToolStripMenuItem.Text = "Score";
+            this.scoreToolStripMenuItem.Click += new System.EventHandler(this.scoreToolStripMenuItem_Click);
             // 
             // cboxMode
             // 
@@ -226,6 +229,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.lblCurrentPLayer);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
@@ -236,6 +240,15 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Rules and Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(89, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "X makes the first move";
             // 
             // lblCurrentPLayer
             // 
@@ -249,7 +262,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 25);
+            this.label3.Location = new System.Drawing.Point(89, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 2;
@@ -281,61 +294,61 @@
             this.btn1.TabIndex = 16;
             this.btn1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn9
             // 
-            this.button1.Location = new System.Drawing.Point(186, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn9.Location = new System.Drawing.Point(186, 285);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(40, 40);
+            this.btn9.TabIndex = 17;
+            this.btn9.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn8
             // 
-            this.button2.Location = new System.Drawing.Point(140, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 18;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn8.Location = new System.Drawing.Point(140, 285);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(40, 40);
+            this.btn8.TabIndex = 18;
+            this.btn8.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn7
             // 
-            this.button3.Location = new System.Drawing.Point(94, 285);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 19;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn7.Location = new System.Drawing.Point(94, 285);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(40, 40);
+            this.btn7.TabIndex = 19;
+            this.btn7.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn6
             // 
-            this.button4.Location = new System.Drawing.Point(186, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 40);
-            this.button4.TabIndex = 20;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn6.Location = new System.Drawing.Point(186, 240);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(40, 40);
+            this.btn6.TabIndex = 20;
+            this.btn6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn5
             // 
-            this.button5.Location = new System.Drawing.Point(140, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 40);
-            this.button5.TabIndex = 21;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn5.Location = new System.Drawing.Point(140, 240);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(40, 40);
+            this.btn5.TabIndex = 21;
+            this.btn5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn4
             // 
-            this.button6.Location = new System.Drawing.Point(94, 239);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(40, 40);
-            this.button6.TabIndex = 22;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn4.Location = new System.Drawing.Point(94, 239);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(40, 40);
+            this.btn4.TabIndex = 22;
+            this.btn4.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn3
             // 
-            this.button7.Location = new System.Drawing.Point(186, 194);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 40);
-            this.button7.TabIndex = 23;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn3.Location = new System.Drawing.Point(186, 194);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(40, 40);
+            this.btn3.TabIndex = 23;
+            this.btn3.UseVisualStyleBackColor = true;
             // 
             // btn2
             // 
@@ -369,13 +382,13 @@
             this.ClientSize = new System.Drawing.Size(550, 364);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.btn2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn3);
+            this.Controls.Add(this.btn4);
+            this.Controls.Add(this.btn5);
+            this.Controls.Add(this.btn6);
+            this.Controls.Add(this.btn7);
+            this.Controls.Add(this.btn8);
+            this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btnPlayer2);
             this.Controls.Add(this.btnPlayer1);
@@ -431,16 +444,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCurrentPLayer;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label4;
     }
 }
 
