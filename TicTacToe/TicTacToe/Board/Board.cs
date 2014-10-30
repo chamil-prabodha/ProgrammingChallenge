@@ -218,9 +218,13 @@ namespace TicTacToe
 
         public void newGame()
         {
-            window.EnableTiles();
-            currentPlayer = player1;
-            clearGame();
+
+            if (player1!=null && player2!=null)
+            {
+                window.EnableTiles();
+                currentPlayer = player1;
+                clearGame(); 
+            }
         }
 
         
