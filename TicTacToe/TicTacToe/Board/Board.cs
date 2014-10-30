@@ -17,6 +17,12 @@ namespace TicTacToe
         private MainWin window = null;
         private Token[,] tiles = new Token[3, 3];
 
+        public Token[,] Tiles
+        {
+            get { return tiles; }
+            set { tiles = value; }
+        }
+
         public void addPlayer1(Player player)
         {
             this.player1 = player;
@@ -92,7 +98,7 @@ namespace TicTacToe
         }
 
 
-        public void Check_win( Player player, int x,int y){
+        public int Check_win( Player player, int x,int y){
 
             string Caption = "Congratulations";
             string Message = player.PlayerName + " Won!!!";
@@ -106,7 +112,8 @@ namespace TicTacToe
                 {
                     MessageBox.Show(Message, Caption);
                     player.Score += 10;
-                    //return (GameStatus)1;
+                    window.DisableTiles();
+                    return 1;
                 }
 
             }
@@ -119,7 +126,8 @@ namespace TicTacToe
                 {
                     MessageBox.Show(Message, Caption);
                     player.Score += 10;
-                    //return (GameStatus)1;
+                    window.DisableTiles();
+                    return 1;
                 }
             }
 
@@ -133,7 +141,8 @@ namespace TicTacToe
                     { 
                         MessageBox.Show(Message, Caption);
                         player.Score += 10;
-                       // return (GameStatus)1;
+                        window.DisableTiles();
+                        return 1;
                     }
                 }
 
@@ -147,17 +156,18 @@ namespace TicTacToe
                 {
                     MessageBox.Show(Message, Caption);
                     player.Score += 10;
-                    //return (GameStatus)1;
+                    window.DisableTiles();
+                    return 1;
                 }
             }
 
             if (player.MoveCount == 9)
             {
                 MessageBox.Show("Game Drawn");
-               // return (GameStatus)2;
+                return 2;
             }
 
-           // return (GameStatus)0;
+            return 0;
         }
 
         public void clearGame()
@@ -173,5 +183,12 @@ namespace TicTacToe
             player2.MoveCount = 0;
         }
 
+        public void updatePlayer()
+        {
+            window.ListViewPlayers.FindItemWithText(currentPlayer.PlayerName).SubItems[2].Text = currentPlayer.Score.ToString();
+            PlayerDA.getInstance().updateScore(currentPlayer);
+        }
+
+        
     }
 }

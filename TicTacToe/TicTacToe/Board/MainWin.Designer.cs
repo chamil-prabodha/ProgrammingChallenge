@@ -75,7 +75,6 @@
             this.txtPlayer1.Name = "txtPlayer1";
             this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
             this.txtPlayer1.TabIndex = 0;
-            
             // 
             // txtPlayer2
             // 
@@ -293,6 +292,7 @@
             this.btn1.Size = new System.Drawing.Size(40, 40);
             this.btn1.TabIndex = 16;
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn9
             // 

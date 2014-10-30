@@ -110,6 +110,20 @@ namespace TicTacToe
             get { return listViewPlayers; }
             set { listViewPlayers = value; }
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            if (btn1.Text.Equals(""))
+            {
+                btn1.Text = board.CurrentPlayer.Sign.ToString();
+                board.Tiles[0, 0] = board.CurrentPlayer.Sign;
+                if (board.Check_win(board.CurrentPlayer,0,0)==1)
+                {
+                    board.updatePlayer();
+                    
+                }
+            }
+        }
         
 
         
