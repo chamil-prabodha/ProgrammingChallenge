@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Board\Player.cs" />
     <Compile Include="Board\Program.cs" />
+    <Compile Include="Board\Token.cs" />
     <Compile Include="DataAccess\Connector.cs" />
     <Compile Include="DataAccess\PlayerDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
