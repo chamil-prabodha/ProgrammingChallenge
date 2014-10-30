@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace TicTacToe.DataAccess
 {
@@ -58,6 +59,13 @@ namespace TicTacToe.DataAccess
             }
 
             return null;
+        }
+
+        //New changes to PlayerDA class
+        public DataView getAllScores()
+        {
+            string query = "SELECT * FROM `tictactoe`.`Players`";
+            return Connector.readTableFromDB(query);
         }
 
     }
