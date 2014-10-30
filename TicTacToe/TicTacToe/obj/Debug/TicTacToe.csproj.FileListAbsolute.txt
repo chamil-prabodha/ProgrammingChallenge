@@ -35,3 +35,11 @@ E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.Generate
 C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
 C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+H:\PC\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MainWin.resources
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Scores.resources
+H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache

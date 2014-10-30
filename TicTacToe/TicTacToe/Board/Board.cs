@@ -189,6 +189,36 @@ namespace TicTacToe
             PlayerDA.getInstance().updateScore(currentPlayer);
         }
 
+        //New changes to Board class
+
+        public void move(Player player, Button activeButton, int x, int y)
+        {
+            if (activeButton.Text.Equals(""))
+            {
+                activeButton.Text = currentPlayer.Sign.ToString();
+                Tiles[x, y] = currentPlayer.Sign;
+
+                int gameStatus = Check_win(currentPlayer, x, y);
+                if (gameStatus == 1)
+                {
+                    updatePlayer();
+                }
+
+
+                if (player1 == currentPlayer)
+                    currentPlayer = player2;
+                else
+                    currentPlayer = player1;
+            }
+        }
+
+        public void newGame()
+        {
+            window.EnableTiles();
+            currentPlayer = player1;
+            clearGame();
+        }
+
         
     }
 }
