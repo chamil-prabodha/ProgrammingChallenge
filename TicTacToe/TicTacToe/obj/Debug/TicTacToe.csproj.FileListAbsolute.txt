@@ -32,3 +32,6 @@ E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MainWin.resourc
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Scores.resources
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
+C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\LochanaR\Documents\GitHub\ProgrammingChallenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb

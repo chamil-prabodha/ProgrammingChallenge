@@ -15,12 +15,28 @@ namespace TicTacToe
         private int playCount = 0;
         private int winCount = 0;
         private float winPlayRatio = 0f;
+        private string[,] tiles = new string[3, 3];
+        private int moveCount = 0;
+
+        public int MoveCount
+        {
+            get { return moveCount; }
+            set { moveCount = value; }
+        }
+
+        public string[,] Tiles
+        {
+            get { return tiles; }
+            set { tiles = value; }
+        }
 
         public Player()
         {
             playCount = 0;
             winCount = 0;
         }
+
+
 
         public string PlayerName
         {
@@ -61,6 +77,18 @@ namespace TicTacToe
         public bool addToDatabase()
         {
             return PlayerDA.getInstance().addPlayerToDB(this);
+        }
+
+        public void clearGame()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    tiles[i, j] = null;
+                }
+            }
+            moveCount = 0;
         }
 
     }

@@ -15,12 +15,13 @@ namespace TicTacToe
         private Player currentPlayer;
         private bool boardEnabled;
         private MainWin window = null;
+        private Token[,] tiles = new Token[3, 3];
 
         public void addPlayer1(Player player)
         {
             this.player1 = player;
             player1.PlayerName = window.TxtPlayer1.Text;
-            player1.Sign = "X";
+            player1.Sign = (Token)1;
 
             ListViewItem playerItem = new ListViewItem(player1.PlayerName);
             playerItem.SubItems.Add("X");
@@ -33,7 +34,7 @@ namespace TicTacToe
             else
             {
                 player1 = PlayerDA.getInstance().getPlayerFromDB(player1.PlayerName);
-                player1.Sign = "X";
+                player1.Sign = (Token)1;
             }
 
 
@@ -50,7 +51,7 @@ namespace TicTacToe
         {
             this.player2 = player;
             player2.PlayerName = window.TxtPlayer2.Text;
-            player2.Sign = "O";
+            player2.Sign = (Token)2;
 
             ListViewItem playerItem = new ListViewItem(player2.PlayerName);
             playerItem.SubItems.Add("O");
@@ -63,7 +64,7 @@ namespace TicTacToe
             else
             {
                 player2 = PlayerDA.getInstance().getPlayerFromDB(player2.PlayerName);
-                player2.Sign = "O";
+                player2.Sign = (Token)2;
             }
             if (player1 != null && player2 != null)
                 window.EnableTiles();
@@ -88,6 +89,88 @@ namespace TicTacToe
         {
             this.window = window;
             boardEnabled = false;
+        }
+
+
+        public void Check_win( Player player, int x,int y){
+
+            string Caption = "Congratulations";
+            string Message = player.PlayerName + " Won!!!";
+            player.MoveCount++;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (tiles[x, i] != player.Sign)
+                    break;
+                if (i == 2)
+                {
+                    MessageBox.Show(Message, Caption);
+                    player.Score += 10;
+                    //return (GameStatus)1;
+                }
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (tiles[i, y] != player.Sign)
+                    break;
+                if (i == 2)
+                {
+                    MessageBox.Show(Message, Caption);
+                    player.Score += 10;
+                    //return (GameStatus)1;
+                }
+            }
+
+            if (x == y)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    if (tiles[i, i] != player.Sign)
+                        break;
+                    if (i == 2)
+                    { 
+                        MessageBox.Show(Message, Caption);
+                        player.Score += 10;
+                       // return (GameStatus)1;
+                    }
+                }
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (tiles[i, 2 - i] != player.Sign)
+                    break;
+                if (i == 2)
+                {
+                    MessageBox.Show(Message, Caption);
+                    player.Score += 10;
+                    //return (GameStatus)1;
+                }
+            }
+
+            if (player.MoveCount == 9)
+            {
+                MessageBox.Show("Game Drawn");
+               // return (GameStatus)2;
+            }
+
+           // return (GameStatus)0;
+        }
+
+        public void clearGame()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    tiles[i, j] = 0;
+                }
+            }
+            player1.MoveCount = 0;
+            player2.MoveCount = 0;
         }
 
     }
