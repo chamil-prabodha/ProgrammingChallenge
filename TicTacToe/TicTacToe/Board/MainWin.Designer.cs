@@ -301,6 +301,7 @@
             this.btn9.Size = new System.Drawing.Size(40, 40);
             this.btn9.TabIndex = 17;
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
@@ -309,6 +310,7 @@
             this.btn8.Size = new System.Drawing.Size(40, 40);
             this.btn8.TabIndex = 18;
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
@@ -317,6 +319,7 @@
             this.btn7.Size = new System.Drawing.Size(40, 40);
             this.btn7.TabIndex = 19;
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn6
             // 
@@ -325,6 +328,7 @@
             this.btn6.Size = new System.Drawing.Size(40, 40);
             this.btn6.TabIndex = 20;
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -333,6 +337,7 @@
             this.btn5.Size = new System.Drawing.Size(40, 40);
             this.btn5.TabIndex = 21;
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -341,6 +346,7 @@
             this.btn4.Size = new System.Drawing.Size(40, 40);
             this.btn4.TabIndex = 22;
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
@@ -349,6 +355,7 @@
             this.btn3.Size = new System.Drawing.Size(40, 40);
             this.btn3.TabIndex = 23;
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -357,6 +364,7 @@
             this.btn2.Size = new System.Drawing.Size(40, 40);
             this.btn2.TabIndex = 24;
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // groupBox4
             // 
@@ -374,6 +382,7 @@
             this.button9.TabIndex = 26;
             this.button9.Text = "New Game";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // MainWin
             // 
