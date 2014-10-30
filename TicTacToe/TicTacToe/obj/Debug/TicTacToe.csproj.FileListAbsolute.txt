@@ -43,3 +43,6 @@ H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MainWin.resources
 H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
 H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Scores.resources
 H:\PC\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb

@@ -30,15 +30,18 @@ namespace TicTacToe.DataAccess
             return success;
         }
 
+        //Changes Made by Chamil
         public bool updateScore(Player currentPlayer)
         {
-            string query = "UPDATE `tictactoe`.`players` SET `Score`='" + currentPlayer.Score + "', `PlayTimes` ='" + currentPlayer.PlayCount + "', `WinTimes` ='" + currentPlayer.WinCount + "', `WinPlayRatio` ='" + currentPlayer.WinPlayRatio + "' WHERE `players`.`PlayerName` = '" + currentPlayer.PlayerName + "';";
+            string query = "UPDATE `tictactoe`.`players` SET `Score`='" + currentPlayer.AllTimeScore + "', `PlayedTimes` ='" + currentPlayer.PlayCount + "', `WinTimes` ='" + currentPlayer.WinCount + "', `WinPlayRatio` ='" + currentPlayer.WinPlayRatio + "' WHERE `players`.`PlayerName` = '" + currentPlayer.PlayerName + "';";
             Connector.Connect();
             bool success = Connector.writeToDB(query);
             Connector.CloseConnection();
             return success;
         }
+        //Changes Made by Chamil
 
+        //Changes Made by Chamil
         public Player getPlayerFromDB(string playerName)
         {
             string query = "SELECT * FROM `tictactoe`.`players` WHERE `PlayerName` = '" + playerName + "';";
@@ -50,7 +53,7 @@ namespace TicTacToe.DataAccess
             {
                 Player currentPlayer = new Player();
                 currentPlayer.PlayerName = reader.GetString(0);
-                currentPlayer.Score = reader.GetInt32(1);
+                currentPlayer.AllTimeScore = reader.GetInt32(1);
                 currentPlayer.PlayCount = reader.GetInt32(2);
                 currentPlayer.WinCount = reader.GetInt32(3);
                 currentPlayer.WinPlayRatio = reader.GetFloat(4);
@@ -60,6 +63,7 @@ namespace TicTacToe.DataAccess
 
             return null;
         }
+        //Changes Made by Chamil
 
         //New changes to PlayerDA class
         public DataView getAllScores()

@@ -12,6 +12,11 @@ namespace TicTacToe
         private string playerName = null;
         private Token sign = 0;
         private int score = 0;
+
+        //Changes Made by Chamil
+        private int allTimeScore = 0;
+        //Changes Made by Chamil
+
         private int playCount = 0;
         private int winCount = 0;
         private float winPlayRatio = 0f;
@@ -61,6 +66,14 @@ namespace TicTacToe
             get { return score; }
             set { score = value; }
         }
+
+        //Changes Made by Chamil
+        public int AllTimeScore
+        {
+            get { return allTimeScore; }
+            set { allTimeScore = value; }
+        }
+        //Changes Made by Chamil
 
         public float WinPlayRatio
         {

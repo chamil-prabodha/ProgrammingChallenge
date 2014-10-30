@@ -183,14 +183,18 @@ namespace TicTacToe
             player2.MoveCount = 0;
         }
 
+        //Changes Made by Chamil
+        //Changes made to the scoring system
         public void updatePlayer()
         {
+            currentPlayer.AllTimeScore += currentPlayer.Score;
             window.ListViewPlayers.FindItemWithText(currentPlayer.PlayerName).SubItems[2].Text = currentPlayer.Score.ToString();
             PlayerDA.getInstance().updateScore(currentPlayer);
         }
+        //Changes Made by Chamil
 
         //New changes to Board class
-
+        //Changes Made by Lochana
         public void move(Player player, Button activeButton, int x, int y)
         {
             if (activeButton.Text.Equals(""))
