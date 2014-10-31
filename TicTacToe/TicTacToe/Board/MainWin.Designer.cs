@@ -63,10 +63,13 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnNewRally = new System.Windows.Forms.Button();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPlayer1
@@ -75,6 +78,7 @@
             this.txtPlayer1.Name = "txtPlayer1";
             this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
             this.txtPlayer1.TabIndex = 0;
+            this.txtPlayer1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPlayer1_KeyDown);
             // 
             // txtPlayer2
             // 
@@ -82,6 +86,7 @@
             this.txtPlayer2.Name = "txtPlayer2";
             this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
             this.txtPlayer2.TabIndex = 1;
+            this.txtPlayer2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPlayer2_KeyDown);
             // 
             // lblPlayer1
             // 
@@ -108,12 +113,14 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(550, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(599, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -144,6 +151,7 @@
             this.cboxMode.Name = "cboxMode";
             this.cboxMode.Size = new System.Drawing.Size(121, 21);
             this.cboxMode.TabIndex = 5;
+            this.cboxMode.SelectedIndexChanged += new System.EventHandler(this.cboxMode_SelectedIndexChanged);
             // 
             // lblMode
             // 
@@ -220,7 +228,7 @@
             // 
             this.groupBox2.Controls.Add(this.listViewPlayers);
             this.groupBox2.Controls.Add(this.lblCurrentPlayers);
-            this.groupBox2.Location = new System.Drawing.Point(319, 27);
+            this.groupBox2.Location = new System.Drawing.Point(350, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(211, 124);
             this.groupBox2.TabIndex = 13;
@@ -233,7 +241,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(321, 173);
+            this.groupBox3.Location = new System.Drawing.Point(350, 209);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(209, 114);
             this.groupBox3.TabIndex = 15;
@@ -287,118 +295,136 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(94, 193);
+            this.btn1.Location = new System.Drawing.Point(6, 13);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(40, 40);
+            this.btn1.Size = new System.Drawing.Size(80, 80);
             this.btn1.TabIndex = 16;
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(186, 285);
+            this.btn9.Location = new System.Drawing.Point(178, 184);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(40, 40);
+            this.btn9.Size = new System.Drawing.Size(80, 80);
             this.btn9.TabIndex = 17;
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(140, 285);
+            this.btn8.Location = new System.Drawing.Point(92, 184);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(40, 40);
+            this.btn8.Size = new System.Drawing.Size(80, 80);
             this.btn8.TabIndex = 18;
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(94, 285);
+            this.btn7.Location = new System.Drawing.Point(6, 184);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(40, 40);
+            this.btn7.Size = new System.Drawing.Size(80, 80);
             this.btn7.TabIndex = 19;
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(186, 240);
+            this.btn6.Location = new System.Drawing.Point(178, 98);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(40, 40);
+            this.btn6.Size = new System.Drawing.Size(80, 80);
             this.btn6.TabIndex = 20;
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(140, 240);
+            this.btn5.Location = new System.Drawing.Point(92, 98);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(40, 40);
+            this.btn5.Size = new System.Drawing.Size(80, 80);
             this.btn5.TabIndex = 21;
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(94, 239);
+            this.btn4.Location = new System.Drawing.Point(6, 98);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(40, 40);
+            this.btn4.Size = new System.Drawing.Size(80, 80);
             this.btn4.TabIndex = 22;
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(186, 194);
+            this.btn3.Location = new System.Drawing.Point(178, 13);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(40, 40);
+            this.btn3.Size = new System.Drawing.Size(80, 80);
             this.btn3.TabIndex = 23;
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(140, 194);
+            this.btn2.Location = new System.Drawing.Point(92, 13);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(40, 40);
+            this.btn2.Size = new System.Drawing.Size(80, 80);
             this.btn2.TabIndex = 24;
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(74, 173);
+            this.groupBox4.Controls.Add(this.btn9);
+            this.groupBox4.Controls.Add(this.btn3);
+            this.groupBox4.Controls.Add(this.btn2);
+            this.groupBox4.Controls.Add(this.btn8);
+            this.groupBox4.Controls.Add(this.btn7);
+            this.groupBox4.Controls.Add(this.btn1);
+            this.groupBox4.Controls.Add(this.btn6);
+            this.groupBox4.Controls.Add(this.btn5);
+            this.groupBox4.Controls.Add(this.btn4);
+            this.groupBox4.Location = new System.Drawing.Point(31, 173);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(174, 169);
+            this.groupBox4.Size = new System.Drawing.Size(265, 270);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             // 
-            // button9
+            // btnNewGame
             // 
-            this.button9.Location = new System.Drawing.Point(319, 302);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 26;
-            this.button9.Text = "New Game";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.btnNewGame_Click);
+            this.btnNewGame.Location = new System.Drawing.Point(350, 357);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+            this.btnNewGame.TabIndex = 26;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
+            // btnNewRally
+            // 
+            this.btnNewRally.Location = new System.Drawing.Point(484, 357);
+            this.btnNewRally.Name = "btnNewRally";
+            this.btnNewRally.Size = new System.Drawing.Size(75, 23);
+            this.btnNewRally.TabIndex = 27;
+            this.btnNewRally.Text = "New Rally";
+            this.btnNewRally.UseVisualStyleBackColor = true;
+            this.btnNewRally.Click += new System.EventHandler(this.btnNewRally_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 364);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn1);
+            this.ClientSize = new System.Drawing.Size(599, 461);
+            this.Controls.Add(this.btnNewRally);
+            this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnPlayer2);
             this.Controls.Add(this.btnPlayer1);
             this.Controls.Add(this.lblMode);
@@ -421,6 +447,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,8 +489,10 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnNewRally;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

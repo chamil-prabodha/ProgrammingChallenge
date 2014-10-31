@@ -23,7 +23,7 @@ namespace TicTacToe.DataAccess
 
         public bool addPlayerToDB(Player newPlayer)
         {
-            string query = "INSERT INTO `tictactoe`.`players` (`PlayerName`,`Score`,`PlayedTimes`,`WinTimes`,`WinPlayRatio`) VALUES('" + newPlayer.PlayerName + "','" + newPlayer.Score + "','" + newPlayer.PlayCount + "','" + newPlayer.WinCount + "','" + newPlayer.WinPlayRatio + "');";
+            string query = "INSERT INTO `tictactoecl`.`Players` (`PlayerName`,`Score`,`PlayedTimes`,`WinTimes`,`WinPlayRatio`) VALUES('" + newPlayer.PlayerName + "','" + newPlayer.Score + "','" + newPlayer.PlayCount + "','" + newPlayer.WinCount + "','" + newPlayer.WinPlayRatio + "');";
             Connector.Connect();
             bool success = Connector.writeToDB(query);
             Connector.CloseConnection();
@@ -33,7 +33,7 @@ namespace TicTacToe.DataAccess
         //Changes Made by Chamil
         public bool updateScore(Player currentPlayer)
         {
-            string query = "UPDATE `tictactoe`.`players` SET `Score`='" + currentPlayer.AllTimeScore + "', `PlayedTimes` ='" + currentPlayer.PlayCount + "', `WinTimes` ='" + currentPlayer.WinCount + "', `WinPlayRatio` ='" + currentPlayer.WinPlayRatio + "' WHERE `players`.`PlayerName` = '" + currentPlayer.PlayerName + "';";
+            string query = "UPDATE `tictactoecl`.`Players` SET `Score`='" + currentPlayer.AllTimeScore + "', `PlayedTimes` ='" + currentPlayer.PlayCount + "', `WinTimes` ='" + currentPlayer.WinCount + "', `WinPlayRatio` ='" + currentPlayer.WinPlayRatio + "' WHERE `Players`.`PlayerName` = '" + currentPlayer.PlayerName + "';";
             Connector.Connect();
             bool success = Connector.writeToDB(query);
             Connector.CloseConnection();
@@ -44,7 +44,7 @@ namespace TicTacToe.DataAccess
         //Changes Made by Chamil
         public Player getPlayerFromDB(string playerName)
         {
-            string query = "SELECT * FROM `tictactoe`.`players` WHERE `PlayerName` = '" + playerName + "';";
+            string query = "SELECT * FROM `tictactoecl`.`Players` WHERE `PlayerName` = '" + playerName + "';";
 
             Connector.Connect();
             MySqlDataReader reader = Connector.readFromDB(query);
@@ -68,7 +68,7 @@ namespace TicTacToe.DataAccess
         //New changes to PlayerDA class
         public DataView getAllScores()
         {
-            string query = "SELECT * FROM `tictactoe`.`Players`";
+            string query = "SELECT * FROM `tictactoecl`.`Players`";
             return Connector.readTableFromDB(query);
         }
 

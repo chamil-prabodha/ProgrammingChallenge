@@ -53,27 +53,27 @@ namespace TicTacToe
 
         private void btnPlayer1_Click(object sender, EventArgs e)
         {
-            if (!txtPlayer1.Text.Equals(""))
+            if (!txtPlayer1.Text.Equals("") && !txtPlayer1.Text.Equals(txtPlayer2.Text))
             {
                 board.addPlayer1(new Player());
                 btnPlayer1.Enabled = false;
             }
 
             else
-                MessageBox.Show("Enter Name First!");
+                MessageBox.Show("Enter New Name!");
 
         }
 
         private void btnPlayer2_Click(object sender, EventArgs e)
         {
-            if (!txtPlayer2.Text.Equals(""))
+            if (!txtPlayer2.Text.Equals("") && !txtPlayer1.Text.Equals(txtPlayer2.Text))
             {
                 board.addPlayer2(new Player());
 
                 btnPlayer2.Enabled = false;
             }
             else
-                MessageBox.Show("Enter Name First!");
+                MessageBox.Show("Enter New Name!");
         }
 
         private void scoreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +107,16 @@ namespace TicTacToe
             btn8.Text = "";
             btn9.Text = "";
             //Changes Made by Chamil
+
+            btn1.Image = null;
+            btn2.Image = null;
+            btn3.Image = null;
+            btn4.Image = null;
+            btn5.Image = null;
+            btn6.Image = null;
+            btn7.Image = null;
+            btn8.Image = null;
+            btn9.Image = null;
         }
 
         public void DisableTiles()
@@ -132,6 +142,17 @@ namespace TicTacToe
             btn8.Text = "";
             btn9.Text = "";
             //Changes Made by Chamil
+
+            btn1.Image = null;
+            btn2.Image = null;
+            btn3.Image = null;
+            btn4.Image = null;
+            btn5.Image = null;
+            btn6.Image = null;
+            btn7.Image = null;
+            btn8.Image = null;
+            btn9.Image = null;
+            
         }
 
         public TextBox TxtPlayer1
@@ -205,6 +226,41 @@ namespace TicTacToe
         {
             board.newGame();
         }
+
+        private void btnNewRally_Click(object sender, EventArgs e)
+        {
+            board.newRally();
+        }
+
+        private void txtPlayer1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPlayer1_Click(sender, e);
+            
+        }
+
+        private void txtPlayer2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPlayer2_Click(sender, e);
+        }
+
+        private void cboxMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboxMode.SelectedItem.ToString().Equals("Computer"))
+            {
+                MessageBox.Show("Upgrade to pro version to play the computer!");
+                cboxMode.Text = cboxMode.Items[0].ToString();
+            }
+            
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
         //Changes Made by Chamil
 
         

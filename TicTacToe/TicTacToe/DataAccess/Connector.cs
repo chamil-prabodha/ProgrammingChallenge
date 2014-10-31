@@ -15,7 +15,7 @@ namespace TicTacToe.DataAccess
 
         public static void Init()
         {
-            string constring = "server=localhost;port=3306;database=tictactoe;user=root;password=";
+            string constring = "server=db4free.net;port=3306;database=tictactoecl;user=admincl;password=myadmin";
             connection = new MySqlConnection(constring);
             try
             {

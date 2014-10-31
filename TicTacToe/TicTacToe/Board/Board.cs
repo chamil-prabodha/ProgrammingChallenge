@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicTacToe.DataAccess;
+using TicTacToe.Properties;
 
 namespace TicTacToe
 {
@@ -111,7 +113,17 @@ namespace TicTacToe
                 if (i == 2)
                 {
                     MessageBox.Show(Message, Caption);
+
                     player.Score += 10;
+                    player.GameScore = 10;
+                    player.WinCount++;
+                    player1.PlayCount++;
+                    player2.PlayCount++;
+                    player1.WinPlayRatio = (float)player1.WinCount / (float)player1.PlayCount;
+                    player2.WinPlayRatio = (float)player2.WinCount / (float)player2.PlayCount;
+                    updatePlayer(player1);
+                    updatePlayer(player2);
+
                     window.DisableTiles();
                     return 1;
                 }
@@ -125,7 +137,17 @@ namespace TicTacToe
                 if (i == 2)
                 {
                     MessageBox.Show(Message, Caption);
+
                     player.Score += 10;
+                    player.GameScore = 10;
+                    player.WinCount++;
+                    player1.PlayCount++;
+                    player2.PlayCount++;
+                    player1.WinPlayRatio = (float)player1.WinCount / (float)player1.PlayCount;
+                    player2.WinPlayRatio = (float)player2.WinCount / (float)player2.PlayCount;
+                    updatePlayer(player1);
+                    updatePlayer(player2);
+
                     window.DisableTiles();
                     return 1;
                 }
@@ -140,7 +162,17 @@ namespace TicTacToe
                     if (i == 2)
                     { 
                         MessageBox.Show(Message, Caption);
+
                         player.Score += 10;
+                        player.GameScore = 10;
+                        player.WinCount++;
+                        player1.PlayCount++;
+                        player2.PlayCount++;
+                        player1.WinPlayRatio = (float)player1.WinCount / (float)player1.PlayCount;
+                        player2.WinPlayRatio = (float)player2.WinCount / (float)player2.PlayCount;
+                        updatePlayer(player1);
+                        updatePlayer(player2);
+
                         window.DisableTiles();
                         return 1;
                     }
@@ -155,15 +187,31 @@ namespace TicTacToe
                 if (i == 2)
                 {
                     MessageBox.Show(Message, Caption);
+
                     player.Score += 10;
+                    player.GameScore = 10;
+                    player.WinCount++;
+                    player1.PlayCount++;
+                    player2.PlayCount++;
+                    player1.WinPlayRatio = (float)player1.WinCount / (float)player1.PlayCount;
+                    player2.WinPlayRatio = (float)player2.WinCount / (float)player2.PlayCount;
+                    updatePlayer(player1);
+                    updatePlayer(player2);
+
                     window.DisableTiles();
                     return 1;
                 }
             }
 
-            if (player.MoveCount == 9)
+            if (player1.MoveCount+player2.MoveCount == 9)
             {
                 MessageBox.Show("Game Drawn");
+                player1.PlayCount++;
+                player2.PlayCount++;
+                player1.WinPlayRatio = (float)player1.WinCount / (float)player1.PlayCount;
+                player2.WinPlayRatio = (float)player2.WinCount / (float)player2.PlayCount;
+                updatePlayer(player1);
+                updatePlayer(player2);
                 return 2;
             }
 
@@ -185,11 +233,11 @@ namespace TicTacToe
 
         //Changes Made by Chamil
         //Changes made to the scoring system
-        public void updatePlayer()
+        public void updatePlayer(Player player)
         {
-            currentPlayer.AllTimeScore += currentPlayer.Score;
-            window.ListViewPlayers.FindItemWithText(currentPlayer.PlayerName).SubItems[2].Text = currentPlayer.Score.ToString();
-            PlayerDA.getInstance().updateScore(currentPlayer);
+            player.AllTimeScore += player.GameScore;
+            window.ListViewPlayers.FindItemWithText(player.PlayerName).SubItems[2].Text = player.Score.ToString();
+            PlayerDA.getInstance().updateScore(player);
         }
         //Changes Made by Chamil
 
@@ -197,18 +245,13 @@ namespace TicTacToe
         //Changes Made by Lochana
         public void move(Player player, Button activeButton, int x, int y)
         {
-            if (activeButton.Text.Equals(""))
+            if (activeButton.Image == null)
             {
-                activeButton.Text = currentPlayer.Sign.ToString();
+                activeButton.Image = TokenToImage(currentPlayer);
                 Tiles[x, y] = currentPlayer.Sign;
 
                 int gameStatus = Check_win(currentPlayer, x, y);
-                if (gameStatus == 1)
-                {
-                    updatePlayer();
-                }
-
-
+                
                 if (player1 == currentPlayer)
                     currentPlayer = player2;
                 else
@@ -222,9 +265,40 @@ namespace TicTacToe
             if (player1!=null && player2!=null)
             {
                 window.EnableTiles();
+                player1.GameScore = 0;
+                player2.GameScore = 0;
                 currentPlayer = player1;
-                clearGame(); 
+                clearGame();
             }
+        }
+
+        public void newRally()
+        {
+            if (player1 != null && player2 != null)
+            {
+                clearGame();
+                window.DisableTiles();
+                player1 = null;
+                player2 = null;
+                
+                window.BtnPlayer1.Enabled = true;
+                window.BtnPlayer2.Enabled = true;
+
+                window.ListViewPlayers.Items.Clear();
+                window.TxtPlayer1.Clear();
+                window.TxtPlayer2.Clear();
+            }
+        }
+
+        public Image TokenToImage(Player currentplayer)
+        {
+            if (currentplayer.Sign == (Token)1)
+                return Resources.Cross_2_btn;
+            else if (currentplayer.Sign == (Token)2)
+                return Resources.Circle_2_btn;
+
+            else
+                return null;
         }
 
         
