@@ -15,9 +15,10 @@ namespace TicTacToe
         [STAThread]
         static void Main()
         {
-            Connector.Init();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Connector.Init();
             Application.Run(new MainWin());
         }
     }

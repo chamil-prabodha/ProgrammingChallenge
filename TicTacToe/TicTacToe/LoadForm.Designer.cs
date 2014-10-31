@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe
 {
-    partial class Scores
+    partial class LoadForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewScores = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScores)).BeginInit();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dataGridViewScores
+            // btnPlay
             // 
-            this.dataGridViewScores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewScores.Location = new System.Drawing.Point(1, 2);
-            this.dataGridViewScores.Name = "dataGridViewScores";
-            this.dataGridViewScores.Size = new System.Drawing.Size(542, 199);
-            this.dataGridViewScores.TabIndex = 0;
+            this.btnPlay.Location = new System.Drawing.Point(307, 247);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(94, 26);
+            this.btnPlay.TabIndex = 0;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.btnPlay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnPlay_KeyDown);
             // 
-            // Scores
+            // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 203);
-            this.Controls.Add(this.dataGridViewScores);
+            this.BackgroundImage = global::TicTacToe.Properties.Resources.Title;
+            this.ClientSize = new System.Drawing.Size(698, 306);
+            this.Controls.Add(this.btnPlay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Scores";
-            this.Text = "Scores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScores)).EndInit();
+            this.Name = "LoadForm";
+            this.Text = "Welcome";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewScores;
+        private System.Windows.Forms.Button btnPlay;
     }
 }

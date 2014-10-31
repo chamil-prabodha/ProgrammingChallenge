@@ -46,3 +46,11 @@ E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.Generate
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
 E:\Programming Challenge\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MainWin.resources
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.LoadForm.resources
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Scores.resources
+C:\Users\Chamil\Desktop\New folder (2)\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache

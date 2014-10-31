@@ -20,7 +20,8 @@ namespace TicTacToe.DataAccess
             try
             {
                 Connect();
-                MessageBox.Show("Connected!!!");
+                LoadForm load = new LoadForm();
+                load.ShowDialog();
             }
             catch (Exception ex)
             {
